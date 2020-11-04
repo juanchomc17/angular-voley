@@ -18,19 +18,22 @@ export class ProductListComponent implements OnInit {
     "name": "Adidas Protector",
     "type": "Manga",
     "price": 300,
-    "stock": 25
+    "stock": 25,
+    "image":"assets/img/manga-adidas.jpg"
   }
   product3 = {
-    "name": "Topper Protector",
+    "name": "DRB Protector",
     "type": "Rodillera",
     "price": 400,
-    "stock": 30
+    "stock": 30,
+    "image":"assets/img/rodillera-drb.jpg"
   }
   product4 = {
     "name": "Mikasa Protector",
     "type": "Manga",
     "price": 700,
-    "stock": 10
+    "stock": 10,
+    "image":"assets/img/manga-mikasa.jpg"
   }
   constructor() { }
 
