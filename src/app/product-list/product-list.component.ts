@@ -13,17 +13,19 @@ export class ProductListComponent implements OnInit {
       "name": "Nike Protector",
       "type": "Rodillera",
       "price": 500,
-      "stock": 0,
+      "stock": 20,
       "image":"assets/img/rodillera-nike.jpg",
       "clearance": false,
+      "quantity": 0,
     },
     {
       "name": "Adidas Protector",
       "type": "Manga",
       "price": 300,
-      "stock": 25,
+      "stock": 0,
       "image":"assets/img/manga-adidas.jpg",
       "clearance": true,
+      "quantity": 0,
     },
     {
       "name": "DRB Protector",
@@ -32,6 +34,7 @@ export class ProductListComponent implements OnInit {
       "stock": 30,
       "image":"assets/img/rodillera-drb.jpg",
       "clearance": false,
+      "quantity": 0,
     },
     {
       "name": "Mikasa Protector",
@@ -40,11 +43,27 @@ export class ProductListComponent implements OnInit {
       "stock": 10,
       "image":"assets/img/manga-mikasa.jpg",
       "clearance": false,
+      "quantity": 0,
     },
   ];
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  upQuiantity(product : Product): void{
+    if(product.quantity < product.stock )
+    product.quantity++;
+  }
+
+  downQuiantity(product : Product): void{
+    if(product.quantity > 0)
+    product.quantity--;
+  }
+
+  changeQuantity(event, product : Product) : void {
+    console.log(event.key);
+
   }
 
 }
