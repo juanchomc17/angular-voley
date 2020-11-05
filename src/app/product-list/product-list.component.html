@@ -9,33 +9,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor= "let product of products"  [ngClass]="{'clearance': product.clearance}">
             <td><img [src]="product.image" [alt]="product.name"></td>
             <td>{{product.name}}</td>
             <td>{{product.type}}</td>
-            <td>{{product.price}}</td>
-            <td>{{product.stock}}</td>
-        </tr>
-        <tr>
-            <td><img [src]="product2.image" [alt]="product2.name"></td>
-            <td>{{product2.name}}</td>
-            <td>{{product2.type}}</td>
-            <td>{{product2.price}}</td>
-            <td>{{product2.stock}}</td>
-        </tr>
-        <tr>
-            <td><img [src]="product3.image" [alt]="product3.name"></td>
-            <td>{{product3.name}}</td>
-            <td>{{product3.type}}</td>
-            <td>{{product3.price}}</td>
-            <td>{{product3.stock}}</td>
-        </tr>
-        <tr>
-            <td><img [src]="product4.image" [alt]="product4.name"></td>
-            <td>{{product4.name}}</td>
-            <td>{{product4.type}}</td>
-            <td>{{product4.price}}</td>
-            <td>{{product4.stock}}</td>
+            <td>{{product.price | currency}}</td>
+            <td> <span class="badge badge-pill badge-dark" *ngIf= "product.stock==0">Sin stock!! </span></td>
         </tr>
     </tbody>
 </table>
