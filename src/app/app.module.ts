@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { VoleyAboutComponent } from './voley-about/voley-about.component';
 import { VoleyProductsComponent } from './voley-products/voley-products.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     ProductListComponent,
     VoleyAboutComponent,
     VoleyProductsComponent,
-    CarritoComponent
+    CarritoComponent,
+    InputNumberComponent
   ],
   imports: [
     BrowserModule,
