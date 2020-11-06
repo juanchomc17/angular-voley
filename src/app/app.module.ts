@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
+import { VoleyAboutComponent } from './voley-about/voley-about.component';
+import { VoleyProductsComponent } from './voley-products/voley-products.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    VoleyAboutComponent,
+    VoleyProductsComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
